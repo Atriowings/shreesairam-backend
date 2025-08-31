@@ -21,9 +21,9 @@ connectDB();
 
 // Initialize Express
 const app = express();
-app.use(express.json());
+app.use(express.json()); 
 app.use(cors({
-  origin: 'https://sairamtest.atriowings.in',
+  origin: 'https://sairamtestnew.atriowings.in',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 });
 
 // Start Server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🌐 CORS allowed origin: ${process.env.CLIENT_URL}`);
 });
